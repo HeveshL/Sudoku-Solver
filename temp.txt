@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+class SudokuTile extends StatefulWidget {
+  @required
+  final int value;
+  @required
+  final Color c;
+
+  const SudokuTile({Key key, this.value, this.c}) : super(key: key);
+
+  @override
+  _SudokuTileState createState() => _SudokuTileState(value, c);
+}
+
+class _SudokuTileState extends State<SudokuTile> {
+  @required
+  final int value;
+  @required
+  final Color c;
+  _SudokuTileState(this.value, this.c);
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(1),
+      child: Container(
+        alignment: Alignment.center,
+        color: c,
+        child: Text(
+          value.toString(),
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
+  }
+}
