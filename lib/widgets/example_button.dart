@@ -5,7 +5,7 @@ class ExampleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 42,
-      width: 50,
+      width: 55,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

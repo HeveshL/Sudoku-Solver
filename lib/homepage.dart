@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xff1B2023),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 30),
           child: StreamBuilder<List<List<int>>>(
             stream: _sudokuBloc.sudokuGridStream,
             builder: (BuildContext context,
@@ -39,10 +39,11 @@ class _HomePageState extends State<HomePage> {
                 width: double.infinity,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(height: 60),
+                    // SizedBox(height: 60),
                     TitleText(),
-                    SizedBox(height: 40),
+                    // SizedBox(height: 40),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -80,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 40),
+                    // SizedBox(height: 40),
                     Container(
                       padding: EdgeInsets.all(3.5),
                       height: 296,
@@ -116,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                         },
                       ),
                     ),
-                    SizedBox(height: 35),
+                    // SizedBox(height: 35),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -435,7 +436,7 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                    SizedBox(height: 25),
+                    // SizedBox(height: 25),
                     GestureDetector(
                       onTap: () {
                         _sudokuBloc.solveSudoku.add(0);
